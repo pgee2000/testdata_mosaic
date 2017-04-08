@@ -1,0 +1,1 @@
+processCcd.py  rawData --output new --configfile=config/processCcd.py --id field=F2 subfield=p23 filter=R --clobber-config --clobber-versions
