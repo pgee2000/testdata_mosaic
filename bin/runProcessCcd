@@ -1,1 +1,11 @@
-processCcd.py  rawData --output new --configfile=config/processCcd.py --id field=F2 subfield=p23 filter=R --clobber-config --clobber-versions
+#!/bin/bash
+if [ "$1" == "" ] ; then
+    echo "Must specify the output directory"
+    exit 1
+fi
+if [ ! -d "$1" ] ; then
+    echo "Directory $1 does not exist"
+    exit 1
+fi
+echo "Running processCcd to output '$1'"
+processCcd.py  $TESTDATA_MOSAIC_DIR/rawData --output=$1 --configfile=$TESTDATA_MOSAIC_DIR/config/processCcd.py --id field=F2 subfield=p23 objname=obj514 filter=R --clobber-config --clobber-versions >& $1/outs

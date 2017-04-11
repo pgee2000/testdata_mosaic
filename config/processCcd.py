@@ -23,5 +23,3 @@ config.calibrate.photoCal.applyColorTerms=True
 config.calibrate.astromRefObjLoader.filterMap = { 'R': 'r', 'V': 'g', 'B': 'u', 'z': 'z'}   # but this only works for 'R'
 config.calibrate.photoRefObjLoader.filterMap = { 'R': 'r', 'V': 'g', 'B': 'u', 'z': 'z'}   # but this only works for 'R'
 config.calibrate.photoCal.fluxField = 'base_PsfFlux_flux'
-#log = lsst.log.Log.getLogger("processCcd.charImage.measurement.base_SdssShape")
-#log.setLevel(lsst.log.INFO)
